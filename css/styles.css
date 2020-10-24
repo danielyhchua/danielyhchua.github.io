@@ -11,6 +11,10 @@ body {
   font-weight: 600;
 }
 
+.btn-outline-primary:hover {
+  color: white;
+}
+
 /* Add monospace class */
 .text-monospace {
   font-family: 'Source Code Pro', sans-serif !important;
@@ -38,22 +42,40 @@ body {
   opacity: 80%;
 }
 
-/* Navbar */
-.sticky-nav {
-  position: fixed;
+/* Profile */
+#profile {
+  margin-top: 40px;
   z-index: 100;
-  top: 0;
-  width: 100%;
 }
 
-.active {
+@media (min-width: 992px) {
+  #profile p {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#top-nav .active {
+  color: #b9b9b9 !important
+}
+
+/* Right Navbar */
+#navbar {
+  display: none;
+}
+
+#navbar .active {
   background-color: #0848A1;
 }
 
 @media (min-width: 992px) {
   #navbar {
+    display: block;
     width: 100px;
+    position: fixed;
     float: right;
+    top: 330px !important;
     right: 20px;
     padding: 0;
     opacity: 90%;
@@ -62,21 +84,15 @@ body {
   #navbar .navbar-nav {
     display: flex;
     flex-direction: column;
-    margin-top: 0 !important;
+    margin-top: 0px !important;
   }
 
-  .nav-link {
+  #navbar .nav-link {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 2.1rem;
     padding-bottom: 2.1rem;
-  }
-
-  .sticky-nav {
-    position: fixed;
-    top: 50px;
-    right: 20px;
   }
 }
 
