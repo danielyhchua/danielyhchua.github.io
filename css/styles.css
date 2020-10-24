@@ -96,6 +96,20 @@ body {
   }
 }
 
+/*****************   BACK TO TOP BUTTON   *****************/
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  opacity: 50%;
+}
+
+@media (min-width: 992px) {
+  .back-to-top {
+    display: none;
+  }
+}
+
 /*****************   SECTION CONTENTS   *****************/
 @media (min-width: 768px) {
   .section-contents {
