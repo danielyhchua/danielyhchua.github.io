@@ -22,20 +22,22 @@ window.onscroll = function() {
 // Add active class for correct scroll position
 function addActive() {
   var posIndex;
+
+  var pageHeight = document.documentElement.offsetHeight,
+    windowHeight = window.innerHeight,
+    scrollPosition = window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0);
+
   if (window.pageYOffset < workExpPos) {
     posIndex = 0;
   } else if (window.pageYOffset >= workExpPos && window.pageYOffset < eduPos) {
     posIndex = 1;
-  } else if (window.pageYOffset >= eduPos && window.pageYOffset < skillsPos) {
+  } else if (window.pageYOffset >= eduPos && pageHeight > windowHeight + scrollPosition) {
     posIndex = 2;
-  } else if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
-    posIndex = 3;
-  } else if (window.pageYOffset >= skillsPos) {
+  } else if (pageHeight <= windowHeight + scrollPosition || window.pageYOffset >= skillsPos) {
     posIndex = 3;
   }
+
   if (posIndex > 0) {
-    console.log("remove");
-    console.log(navList[0]);
     navList[0].classList.remove("active");
   }
   navList.forEach((item, i) => {
