@@ -1,6 +1,6 @@
 /*******************
  *
- *   NAVBAR
+ *   RIGHT NAVBAR
  *
  *******************/
 // Get the navbar
