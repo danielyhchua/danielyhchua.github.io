@@ -119,7 +119,16 @@ body {
   }
 }
 
-/*****************   SECTION CONTENTS   *****************/
+/*****************   HOME PAGE   *****************/
+@media (max-width: 476px) {
+  .vert-btn-stack {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/*****************   SECTION CONTENTS (RESUME)   *****************/
 @media (min-width: 768px) {
   .section-contents {
     width: 75%;
